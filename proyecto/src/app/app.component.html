@@ -1,0 +1,25 @@
+
+<div class="container m-5">
+    <div *ngIf="numero % 2 == 0; else impar">    
+        <h1>Número {{ numero }} - Es par</h1>   </div>
+    <ng-template #impar>      <h1>Número {{ numero }} - Es impar</h1>   </ng-template>
+
+
+
+    <div *ngIf="numero % 2 == 0; then par else impar"></div>
+    <ng-template #par>    <h1>Número {{ numero }} - Es par</h1></ng-template>
+    <ng-template #impar>    <h1>Número {{ numero }} - Es impar</h1></ng-template>
+    
+
+
+<app-header></app-header>
+<!--<h1>curso Angular PUE</h1> -->
+<app-body>
+    
+</app-body>
+<app-footer></app-footer>
+<!--<ul>-->
+<!--  <li>Nombre: {{nombre}} </li>-->
+<!--  <li>Apellido: {{apellido}} </li>-->
+<!--</ul>-->
+</div>
